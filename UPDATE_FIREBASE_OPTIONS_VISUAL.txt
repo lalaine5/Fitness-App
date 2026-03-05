@@ -1,0 +1,135 @@
+╔══════════════════════════════════════════════════════════════════════╗
+║        🔧 UPDATE firebase_options.dart - VISUAL GUIDE                ║
+╚══════════════════════════════════════════════════════════════════════╝
+
+STEP 1: GET YOUR VALUES FROM FIREBASE
+┌────────────────────────────────────────────────────────────────────┐
+│ 1. Go to: https://console.firebase.google.com/                    │
+│ 2. Click your project: my-fitness-app                             │
+│ 3. Click ⚙️ gear icon → "Project settings"                        │
+│ 4. Copy these 4 values:                                            │
+│                                                                    │
+│    📋 Web API Key:        AIzaSyBxxxxxxxxxxxxxxxxxxxxxxxxxxxxx     │
+│    📋 Project ID:         my-fitness-app-12345                    │
+│    📋 Project Number:     123456789012                            │
+│                                                                    │
+│ 5. Scroll to "Your apps" section                                  │
+│                                                                    │
+│    📋 App ID:             1:123456789:android:abcdef123456        │
+└────────────────────────────────────────────────────────────────────┘
+
+STEP 2: OPEN THE FILE
+┌────────────────────────────────────────────────────────────────────┐
+│ File location: fitness_app/lib/firebase_options.dart              │
+│                                                                    │
+│ Open it in your code editor (VS Code, Android Studio, etc.)       │
+└────────────────────────────────────────────────────────────────────┘
+
+STEP 3: FIND THE ANDROID SECTION
+┌────────────────────────────────────────────────────────────────────┐
+│ Scroll down to find this section:                                 │
+│                                                                    │
+│   static const FirebaseOptions android = FirebaseOptions(         │
+│     apiKey: 'YOUR_ANDROID_API_KEY',           ← Line 1           │
+│     appId: 'YOUR_ANDROID_APP_ID',             ← Line 2           │
+│     messagingSenderId: 'YOUR_SENDER_ID',      ← Line 3           │
+│     projectId: 'YOUR_PROJECT_ID',             ← Line 4           │
+│     storageBucket: 'YOUR_PROJECT_ID.appspot.com',  ← Line 5      │
+│   );                                                               │
+└────────────────────────────────────────────────────────────────────┘
+
+STEP 4: REPLACE THE VALUES
+┌────────────────────────────────────────────────────────────────────┐
+│ BEFORE (with placeholders):                                        │
+│ ┌────────────────────────────────────────────────────────────────┐│
+│ │ apiKey: 'YOUR_ANDROID_API_KEY',                                ││
+│ │ appId: 'YOUR_ANDROID_APP_ID',                                  ││
+│ │ messagingSenderId: 'YOUR_SENDER_ID',                           ││
+│ │ projectId: 'YOUR_PROJECT_ID',                                  ││
+│ │ storageBucket: 'YOUR_PROJECT_ID.appspot.com',                  ││
+│ └────────────────────────────────────────────────────────────────┘│
+│                                                                    │
+│ AFTER (with your values):                                          │
+│ ┌────────────────────────────────────────────────────────────────┐│
+│ │ apiKey: 'AIzaSyBxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',                ││
+│ │ appId: '1:123456789:android:abcdef123456',                     ││
+│ │ messagingSenderId: '123456789012',                             ││
+│ │ projectId: 'my-fitness-app-12345',                             ││
+│ │ storageBucket: 'my-fitness-app-12345.appspot.com',             ││
+│ └────────────────────────────────────────────────────────────────┘│
+└────────────────────────────────────────────────────────────────────┘
+
+WHAT TO REPLACE:
+┌────────────────────────────────────────────────────────────────────┐
+│ Line 1: YOUR_ANDROID_API_KEY                                       │
+│         Replace with: Your Web API Key from Firebase              │
+│         Example: AIzaSyBxxxxxxxxxxxxxxxxxxxxxxxxxxxxx              │
+│                                                                    │
+│ Line 2: YOUR_ANDROID_APP_ID                                        │
+│         Replace with: Your App ID from "Your apps" section        │
+│         Example: 1:123456789:android:abcdef123456                 │
+│                                                                    │
+│ Line 3: YOUR_SENDER_ID                                             │
+│         Replace with: Your Project Number from Firebase           │
+│         Example: 123456789012                                     │
+│                                                                    │
+│ Line 4: YOUR_PROJECT_ID (appears twice!)                           │
+│         Replace with: Your Project ID from Firebase               │
+│         Example: my-fitness-app-12345                             │
+│                                                                    │
+│ Line 5: YOUR_PROJECT_ID.appspot.com                                │
+│         Replace YOUR_PROJECT_ID with your Project ID              │
+│         Example: my-fitness-app-12345.appspot.com                 │
+└────────────────────────────────────────────────────────────────────┘
+
+STEP 5: SAVE THE FILE
+┌────────────────────────────────────────────────────────────────────┐
+│ Press: Ctrl + S (Windows) or Cmd + S (Mac)                        │
+└────────────────────────────────────────────────────────────────────┘
+
+╔══════════════════════════════════════════════════════════════════════╗
+║                        QUICK MAPPING                                 ║
+╠══════════════════════════════════════════════════════════════════════╣
+║  Firebase Console          →  firebase_options.dart                 ║
+║  ─────────────────────────────────────────────────────────────────  ║
+║  Web API Key               →  apiKey                                 ║
+║  App ID                    →  appId                                  ║
+║  Project Number            →  messagingSenderId                      ║
+║  Project ID                →  projectId                              ║
+║  Project ID + .appspot.com →  storageBucket                          ║
+╚══════════════════════════════════════════════════════════════════════╝
+
+VERIFICATION CHECKLIST:
+  □ All 5 values replaced (no YOUR_ left)
+  □ Each value in single quotes 'like this'
+  □ apiKey starts with AIza
+  □ appId has format: 1:numbers:android:letters
+  □ messagingSenderId is only numbers
+  □ projectId matches your Firebase project name
+  □ storageBucket ends with .appspot.com
+  □ File saved (Ctrl+S)
+
+EXAMPLE (COMPLETE):
+┌────────────────────────────────────────────────────────────────────┐
+│ static const FirebaseOptions android = FirebaseOptions(           │
+│   apiKey: 'AIzaSyABC123xyz789',                                   │
+│   appId: '1:987654321:android:abc123def456',                      │
+│   messagingSenderId: '987654321',                                 │
+│   projectId: 'my-fitness-app-xyz',                                │
+│   storageBucket: 'my-fitness-app-xyz.appspot.com',                │
+│ );                                                                 │
+└────────────────────────────────────────────────────────────────────┘
+
+NEXT STEPS:
+  1. ✅ Download google-services.json
+  2. ✅ Update firebase_options.dart (you're doing this!)
+  3. ⬜ Enable Email/Password in Firebase Console
+  4. ⬜ Run: flutter run
+
+NEED MORE HELP?
+  → HOW_TO_UPDATE_FIREBASE_OPTIONS.md (detailed guide)
+  → SETUP_COMPLETE.md (complete setup)
+
+╔══════════════════════════════════════════════════════════════════════╗
+║  TIP: You can also find these values in google-services.json!       ║
+╚══════════════════════════════════════════════════════════════════════╝

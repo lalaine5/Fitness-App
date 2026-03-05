@@ -1,0 +1,118 @@
+╔══════════════════════════════════════════════════════════════════════╗
+║          📥 DOWNLOAD google-services.json - VISUAL GUIDE            ║
+╚══════════════════════════════════════════════════════════════════════╝
+
+STEP 1: GO TO FIREBASE
+┌────────────────────────────────────────────────────────────┐
+│  Browser → https://console.firebase.google.com/            │
+│  Sign in with Google account                               │
+└────────────────────────────────────────────────────────────┘
+
+STEP 2: CREATE PROJECT
+┌────────────────────────────────────────────────────────────┐
+│  Click: [+ Create a project]                               │
+│  Name: my-fitness-app                                      │
+│  Click: [Continue] → [Continue] → [Create project]         │
+└────────────────────────────────────────────────────────────┘
+
+STEP 3: ADD ANDROID APP
+┌────────────────────────────────────────────────────────────┐
+│  Click the Android icon (🤖)                               │
+│                                                            │
+│  You'll see 3 icons:                                       │
+│  [iOS]  [Android]  [Web]                                   │
+│          ↑ Click this one                                  │
+└────────────────────────────────────────────────────────────┘
+
+STEP 4: REGISTER APP
+┌────────────────────────────────────────────────────────────┐
+│  Android package name:                                     │
+│  ┌──────────────────────────────────────────────────────┐ │
+│  │ com.example.fitness_app                              │ │
+│  └──────────────────────────────────────────────────────┘ │
+│                                                            │
+│  App nickname (optional):                                  │
+│  ┌──────────────────────────────────────────────────────┐ │
+│  │ Fitness App                                          │ │
+│  └──────────────────────────────────────────────────────┘ │
+│                                                            │
+│  Click: [Register app]                                     │
+└────────────────────────────────────────────────────────────┘
+
+STEP 5: DOWNLOAD FILE
+┌────────────────────────────────────────────────────────────┐
+│  You'll see:                                               │
+│                                                            │
+│  Download google-services.json                             │
+│  ┌────────────────────────────────────────────────────┐   │
+│  │  [Download google-services.json]  ← Click this!    │   │
+│  └────────────────────────────────────────────────────┘   │
+│                                                            │
+│  File downloads to: C:\Users\narta\Downloads\              │
+└────────────────────────────────────────────────────────────┘
+
+STEP 6: MOVE FILE TO PROJECT
+┌────────────────────────────────────────────────────────────┐
+│  FROM: C:\Users\narta\Downloads\google-services.json       │
+│                                                            │
+│  TO: fitness_app\android\app\google-services.json          │
+│                                                            │
+│  Full path:                                                │
+│  C:\Users\narta\OneDrive\Desktop\Fitness App\              │
+│  fitness_app\android\app\google-services.json              │
+└────────────────────────────────────────────────────────────┘
+
+STEP 7: VERIFY LOCATION
+┌────────────────────────────────────────────────────────────┐
+│  fitness_app/                                              │
+│  └── android/                                              │
+│      └── app/                                              │
+│          └── google-services.json  ✅ MUST BE HERE!        │
+│                                                            │
+│  NOT HERE (wrong):                                         │
+│  ❌ fitness_app/google-services.json                       │
+│  ❌ fitness_app/android/google-services.json               │
+└────────────────────────────────────────────────────────────┘
+
+╔══════════════════════════════════════════════════════════════════════╗
+║                        QUICK CHECKLIST                               ║
+╠══════════════════════════════════════════════════════════════════════╣
+║  □ Went to Firebase Console                                          ║
+║  □ Created project: my-fitness-app                                   ║
+║  □ Clicked Android icon                                              ║
+║  □ Entered package: com.example.fitness_app                          ║
+║  □ Clicked "Register app"                                            ║
+║  □ Clicked "Download google-services.json"                           ║
+║  □ Moved file to: fitness_app\android\app\                           ║
+║  □ Verified file is in correct location                              ║
+╚══════════════════════════════════════════════════════════════════════╝
+
+WHAT THE FILE LOOKS LIKE:
+┌────────────────────────────────────────────────────────────┐
+│  google-services.json                                      │
+│  ┌────────────────────────────────────────────────────┐   │
+│  │ {                                                  │   │
+│  │   "project_info": {                                │   │
+│  │     "project_number": "123456789",                 │   │
+│  │     "project_id": "my-fitness-app-xxxxx",          │   │
+│  │     "storage_bucket": "..."                        │   │
+│  │   },                                               │   │
+│  │   "client": [ ... ]                                │   │
+│  │ }                                                  │   │
+│  └────────────────────────────────────────────────────┘   │
+│  Size: ~1-2 KB                                             │
+└────────────────────────────────────────────────────────────┘
+
+NEXT STEPS:
+  1. ✅ Download google-services.json (you're doing this now!)
+  2. ⬜ Update firebase_options.dart
+  3. ⬜ Enable Email/Password authentication
+  4. ⬜ Run: flutter run
+
+NEED MORE HELP?
+  → Open: HOW_TO_DOWNLOAD_GOOGLE_SERVICES.md (detailed guide)
+  → Open: SETUP_COMPLETE.md (complete setup)
+
+╔══════════════════════════════════════════════════════════════════════╗
+║  TIP: Keep Firebase Console open - you'll need it for next steps!   ║
+╚══════════════════════════════════════════════════════════════════════╝
